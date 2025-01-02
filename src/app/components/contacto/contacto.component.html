@@ -4,9 +4,6 @@
     <label for="">Nombre</label>
     <input type="text" formControlName="nombre">
   </div>
-  <!-- <div *ngIf="formulario.get('nombre')?.errors && formulario.get('nombre')?.dirty">
-    <p>El campo es obligatorio</p>
-  </div> -->
   <div *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">
     <P>campo obligatorio</P>
   </div>

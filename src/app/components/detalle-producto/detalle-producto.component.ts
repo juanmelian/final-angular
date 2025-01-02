@@ -20,10 +20,8 @@ export class DetalleProductoComponent implements OnInit {
 
     this.route.params.subscribe(params=>{
 
-      const _id = params['id'].toString();
-      // console.log('_id', _id);
-
-      this.productoService.getProductoById(_id);
+      const _id = Number(params['id']);
+      this.producto = this.productoService.getProductoById(_id);
 
     });
   }

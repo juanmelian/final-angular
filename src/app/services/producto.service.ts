@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProductoService {
 
-  private porductos = [
+  private productos = [
     { id: 1, nombre: 'Producto 1', descripcion: 'Descripción 1', precio: 20 },
     { id: 2, nombre: 'Producto 2', descripcion: 'Descripción 2', precio: 30 },
     { id: 3, nombre: 'Producto 3', descripcion: 'Descripción 3', precio: 50 },
@@ -14,10 +14,10 @@ export class ProductoService {
   constructor() { }
 
   getProductos(){
-    return this.porductos;
+    return this.productos;
   }
 
   getProductoById(id: number){
-    return this.porductos.find((producto)=> producto.id === id);
+    return this.productos.find((producto)=> producto.id === id);
   }
 }
